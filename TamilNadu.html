@@ -15,24 +15,61 @@
 			font-family: Arial, sans-serif;
 		}
 
-		.image-container img {
+		.flag-container {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 40px;
+			max-width: 1200px;
+			width: 90vw;
+		}
+
+		.flag-card {
+			flex: 1;
+		}
+
+		.flag-card img {
 			display: block;
-			max-width: 90vw;
+			width: 100%;
 			height: auto;
 			margin: 0 auto 20px;
 		}
 
-		.image-container p {
+		.flag-card p {
 			margin: 0;
 			font-size: 2rem;
 			font-weight: bold;
 		}
+
+		.leader-label {
+			margin-left: 12px;
+			font-size: 1.25rem;
+			font-weight: normal;
+		}
+
+		@media (max-width: 700px) {
+			.flag-container {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.flag-card {
+				width: 100%;
+				max-width: 500px;
+			}
+		}
 	</style>
 </head>
 <body>
-	<main class="image-container">
-		<img src="tvk-flag.png" alt="TVK flag with elephants and a flower emblem">
-		<p>TVK (Vijay)</p>
+	<main class="flag-container">
+		<section class="flag-card">
+			<img src="tvk-flag.png" alt="TVK flag with elephants and a flower emblem">
+			<p>TVK (Vijay)<span class="leader-label">Current Leader</span></p>
+		</section>
+		<section class="flag-card">
+			<img src="dmk-flag.png" alt="DMK flag">
+			<p>DMK (Stalin)<span class="leader-label">Former Leader</span></p>
+		</section>
 	</main>
 </body>
 </html>
